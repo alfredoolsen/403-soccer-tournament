@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -95,18 +95,22 @@ namespace OlympicSoccerTournament
 
                 
                     Console.WriteLine("Enter Team " + i + "'s name:");
+                // setting it false so that it can re enter the while loop
+                    bteamPoints = false;
                     string userInput = Console.ReadLine();// reads user input
                     Console.WriteLine();
                     string teamName = UppercaseFirst(userInput); // teamName = "United states"
 
                 //if teampoints entered is anything but the points you will need to enter a vaild number again
+
+               
                     while (!bteamPoints)
                     {
 
                         try
                         {
                             Console.WriteLine("Enter " + teamName + "'s points:");
-
+                           
                             teamPoints = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine();
 
